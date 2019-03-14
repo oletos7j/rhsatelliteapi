@@ -22,7 +22,7 @@ end_date = e.strftime('%Y%m%d' + 'T' + '%H:%M:%S')
 s = datetime.now() - timedelta(days=n)
 start_date = s.strftime('%Y%m%d' + 'T' + '%H:%M:%S')
 
-#ignores ssl cert issues
+#ignores self-signed ssl certs
 if (not os.environ.get('PYTHONHTTPSVERIFY', '') and getattr(ssl, '_create_unverified_context', None)):
     ssl._create_default_https_context = ssl._create_unverified_context
     client = xmlrpc.client.Server(uri, verbose=0)
