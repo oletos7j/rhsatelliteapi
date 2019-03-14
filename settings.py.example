@@ -1,0 +1,3 @@
+URI = "Your RedHat Satellite API URL goes here"
+USER_NAME = "Username"
+USER_PASSWORD = "Password"
